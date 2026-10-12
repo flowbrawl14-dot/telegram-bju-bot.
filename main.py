@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 
 # ⚠️ Ваш токен бота
-TOKEN = "8881982081:AAGXI-WI21RXlT2nYsUgMvSTX0sYC6LtFug"
+TOKEN = "8881982081:AAEHshfwv5LSm1GBbANjj4nNXweMy0K9QQk"
 
 bot = telebot.TeleBot(TOKEN)
 user_data = {}
@@ -288,4 +288,5 @@ def process_activity(message):
 
 
 print("Бот успешно запущен!")
-bot.infinity_polling()
+bot.remove_webhook()
+bot.infinity_polling(skip_pending=True)
